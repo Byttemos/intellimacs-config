@@ -71,3 +71,6 @@ source ~/intellimacs/spacemacs/windows.vim
 
 let g:WhichKeyDesc_Zoom = "<leader>z    +zoom"
 source ~/intellimacs/spacemacs/zoom.vim
+
+let g:WhichKeyDesc_NERDTree = "<leader>< +Harpoon"
+source ~/intellimacs/spacemacs/harpoon.vim

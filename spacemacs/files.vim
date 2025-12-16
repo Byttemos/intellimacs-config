@@ -20,12 +20,12 @@ vnoremap <leader>feR    <Esc>:source ~/.ideavimrc<CR>
 """ ---------------------------------------------
 
 " Find files
-let g:WhichKeyDesc_Files_GotoFileAlt = "<leader>fF goto-file"
-nnoremap <leader>fF    :action GotoFile<CR>
-vnoremap <leader>fF    :action GotoFile<CR>
-let g:WhichKeyDesc_Files_GotoFile = "<leader>ff goto-file"
-nnoremap <leader>ff    :action GotoFile<CR>
-vnoremap <leader>ff    :action GotoFile<CR>
+let g:WhichKeyDesc_Files_GotoFileAlt = "<leader>fF Fuzzy-search ALL files"
+nnoremap <leader>ff    :action com.fuzzyfilesearch.SearchAllFiles<CR>
+vnoremap <leader>ff    :action com.fuzzyfilesearch.SearchAllFiles<CR>
+let g:WhichKeyDesc_Files_GotoFile = "<leader>ff Fuzzy-search Code files"
+nnoremap <leader>fF    :action com.fuzzyfilesearch.SearchCodeFiles<CR>
+vnoremap <leader>fF    :action com.fuzzyfilesearch.SearchCodeFiles<CR>
 
 " Rename file
 let g:WhichKeyDesc_Files_Rename = "<leader>fR rename"
@@ -33,9 +33,9 @@ nnoremap <leader>fR    :action RenameFile<CR>
 vnoremap <leader>fR    :action RenameFile<CR>
 
 " Recent files
-let g:WhichKeyDesc_Files_Recent = "<leader>fr recent"
-nnoremap <leader>fr    :action RecentFiles<CR>
-vnoremap <leader>fr    :action RecentFiles<CR>
+let g:WhichKeyDesc_Files_Recent = "<leader>fr Fuzzy-search Recent files"
+nnoremap <leader>fr    :action com.fuzzyfilesearch.SearchRecentFiles<CR>
+vnoremap <leader>fr    :action com.fuzzyfilesearch.SearchRecentFiles<CR>
 
 " Save all files
 let g:WhichKeyDesc_Files_SaveAll = "<leader>fS save-all"
@@ -51,15 +51,15 @@ vnoremap <leader>fs    :action SaveDocument<CR>
 " Sadly when you are inside the project window this key binding does not work
 " anymore. You can use <A-1> if you want to close the window or <Esc> if you
 " want to leave the window opened and focus on the code.
-let g:WhichKeyDesc_Files_FileTree = "<leader>ft file-tree"
-nnoremap <leader>ft    :action ActivateProjectToolWindow<CR>
-vnoremap <leader>ft    :action ActivateProjectToolWindow<CR>
+let g:WhichKeyDesc_Files_FileTree = "<leader>ft Open NetRW"
+nnoremap <leader>ft    :action OpenNetrw<CR>
+vnoremap <leader>ft    :action OpenNetrw<CR>
 
 """ Yank/Copy Submenu ---------------------------------
 let g:WhichKeyDesc_Files_YankCopy = "<leader>fy +Yank/Copy"
 
 " Copy file path
-let g:WhichKeyDesc_Files_YankCopy_FilePath = "<leader>fyy file-path"
-nnoremap <leader>fyy    :action CopyAbsolutePath<CR>
-vnoremap <leader>fyy    :action CopyAbsolutePath<CR>
+let g:WhichKeyDesc_Files_YankCopy_FilePath = "<leader>fl Fuzzy-search Local files"
+nnoremap <leader>fl    :action com.fuzzyfilesearch.SearchLocalFiles<CR>
+vnoremap <leader>fl    :action com.fuzzyfilesearch.SearchLocalFiles<CR>
 """ ---------------------------------------------------
