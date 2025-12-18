@@ -22,3 +22,8 @@ vnoremap <leader>tr    <Esc>:set relativenumber!<CR>
 let g:WhichKeyDesc_Toggles_ShowWhitespace = "<leader>tw show-whitespace"
 nnoremap <leader>tw    :action EditorToggleShowWhitespaces<CR>
 vnoremap <leader>tw    :action EditorToggleShowWhitespaces<CR>
+
+" Toggle Scrolloff centering
+let g:WhichKeyDesc_Toggles_ToggleScrollOff = "<leader>ts toggle centered cursor (scrolloff)"
+nnoremap <leader>ts :if &scrolloff == 5 \| set scrolloff=999 \| else \| set scrolloff=5 \| endif<CR>
+vnoremap <leader>ts <Esc>:if &scrolloff == 5 \| set scrolloff=999 \| else \| set scrolloff=5 \| endif<CR>
